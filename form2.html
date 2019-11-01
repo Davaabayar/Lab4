@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Lab 4</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .container {
+            width: 1280px;
+        }
+
+        h1 {
+            margin-top: 40px;
+        }
+
+        label,
+        input[type="text"] {
+            display: block;
+            width: 100%;
+        }
+
+        input[type="text"],
+        input[type="password"],
+        select {
+            font-size: 16px;
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"], input[type="reset"]{
+            color: #fff;
+            display: inline-block;
+            padding: 15px 25px;
+            border: none;
+            font-size: 17px;
+            font-weight: 400;
+            margin-top: 13px;
+            border-radius: 4px;
+            min-width: 100px;
+            margin-right:20px;
+        }
+        input[type="submit"]{
+            background: #007BFF;
+        }
+        input[type="reset"]{
+            background: #ff9800;
+        }
+        label {
+            margin: 15px 0 5px 0;
+        }
+
+        .gray {
+            color: gray;
+        }
+
+        header {
+            background: #007BFF;
+            color: #fff;
+        }
+
+        nav a {
+            color: #fff;
+        }
+        nav span{
+            padding: .5rem 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="">
+        <header>
+            <nav class="nav">
+                <span>MUM Golden Dome Market :: SRM System</span>
+                <a class="nav-link active" href="#">Products</a>
+                <a class="nav-link" href="#">Suppliers</a>
+            </nav>
+        </header>
+    </div>
+    <section class="container">
+        <h1>New Product Form</h1>
+        <form method="POST">
+            <div class="row">
+                <div class="col-md-6">
+                    <label for="name">Product Number</label>
+                    <input type="text" name="email" placeholder="Enter product number" required pattern="\d+" title="Please enter number">
+                </div>
+                <div class="col-md-6">
+                    <label for="number">Quantitiy in stock</label>
+                    <input type="text" name="email" required pattern="\d." title="Quantitiy in stock">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <label for="name">Name</label>
+                    <input type="text" name="email" placeholder="Enter product name" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="number">Supplier:</label>
+                    <select name="supplier">
+                        <option>Select a supplier</option>
+                        <option>Supplier 1</option>
+                        <option>Supplier 2</option>
+                        <option>Supplier 3</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <label for="name">Unit Price</label>
+                    <input type="text" name="price" placeholder="0.0" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="number">Date supplied</label>
+                    <input type="text" name="email" required pattern="([12]\d{3}-(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01]))"
+                        title="Please enter valid date.">
+                    <div class="gray">Enter a valid date.</div>
+                </div>
+            </div>
+           
+            <input type="reset"><input type="submit">
+        </form>
+    
+    <div class="validate" style="margin-top:100px;">
+            <a href="https://validator.w3.org/check?uri=https://peaceful-franklin-f772dc.netlify.com//" target="_blank">
+                <img src="http://mumstudents.org/cs472/2014-09/images/w3c-html.png" alt="html validator">
+            </a>
+    
+            <a href="https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fpeaceful-franklin-f772dc.netlify.com%2F&amp;profile=css3svg&amp;usermedium=all&amp;warning=1&amp;vextwarning=&amp;lang=en" target="_blank">
+                <img src="http://mumstudents.org/cs472/2013-09/images/w3c-css.png" alt="css validator">
+            </a>
+    
+        </div>
+    </section>
+</body>
+
+</html>

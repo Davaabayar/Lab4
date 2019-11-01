@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Lab 4</title>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .container {
+            width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #eee;
+            margin-top: 60px;
+            border-radius: 8px;
+        }
+
+        label,
+        input[type="text"] {
+            display: block;
+            width: 100%;
+        }
+
+        input[type="text"],
+        [type="password"] {
+            padding: 8px;
+            font-size: 16px;
+            width: 100%;
+            padding: 12px 15px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background: #007BFF;
+            color: #fff;
+            display: block;
+            padding: 15px 25px;
+            border: none;
+            font-size: 17px;
+            font-weight: 400;
+            margin-top: 13px;
+            border-radius: 4px;
+        }
+
+        label {
+            margin: 15px 0 5px 0;
+        }
+
+        .gray {
+            color: gray;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="container">
+        <header>
+            <h1>Login Form</h1>
+        </header>
+        <form method="POST">
+            <div>
+                <label for="email">Email address</label>
+                <input type="text" name="email" placeholder="Enter email" required
+                    pattern="[a-z0-9._+\-]+@[a-z0-9.\-]+\.[a-z]{2,3}" title="Please use valid email format.">
+                <div class="gray">We'll never share your email with anyone else.</div>
+            </div>
+            <div>
+                <label for="password">Password</label>
+                <input type="password" name="password" placeholder="Password" required
+                    pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{10,}"
+                    title="Password field is at least 10 characters in length and contain at least one number and one uppercase and lowercase letter">
+            </div>
+            <div>
+                <label for="url">URL</label>
+                <input type="text" name="password" placeholder="Password" required pattern="(?=http:\/\/|https:\/\/).+"
+                    title="Please use valid url starting with http:// or https://">
+            </div>
+            <input type="checkbox" name="cc" value="checkme" checked="checked" /> Check me out</label>
+            <input type="submit" value="Submit">
+        </form>
+    </section>
+    <div class="validate" style="margin-top:50px; text-align: center;">
+            <a href="https://validator.w3.org/check?uri=https://peaceful-franklin-f772dc.netlify.com//" target="_blank">
+                <img src="http://mumstudents.org/cs472/2014-09/images/w3c-html.png" alt="html validator">
+            </a>
+    
+            <a href="https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fpeaceful-franklin-f772dc.netlify.com%2F&amp;profile=css3svg&amp;usermedium=all&amp;warning=1&amp;vextwarning=&amp;lang=en" target="_blank">
+                <img src="http://mumstudents.org/cs472/2013-09/images/w3c-css.png" alt="css validator">
+            </a>
+        </div>
+</body>
+
+</html>
